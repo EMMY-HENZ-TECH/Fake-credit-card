@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HENZ CC GENERATOR</title>
+  <style>
+    :root {
+      --background-color: #1a1a1a;
+      --text-color: #ffffff;
+      --button-bg: #f39c12;
+      --button-hover: #e67e22;
+      --input-bg: #2a2a2a;
+      --border-color: #f39c12;
+      --link-color: #1abc9c;
+      --link-hover-color: #16a085;
+      --error-color: #e74c3c;
+    }
+
+    .light-theme {
+      --background-color: #f7f7f7;
+      --text-color: #121212;
+      --button-bg: #3498db;
+      --button-hover: #2980b9;
+      --input-bg: #ffffff;
+      --border-color: #3498db;
+      --link-color: #2ecc71;
+      --link-hover-color: #27ae60;
+      --error-color: #c0392b;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: var(--background-color);
+      background-image: url('https://i.ibb.co/Zcs72jH/file-7i-Tpzy-BLx-N2q-Pb-KEw-UCJd4.webp');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: var(--text-color);
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: var(--button-bg);
+    }
+
+    .form-group {
+      margin: 20px auto;
+      width: 90%;
+      max-width: 600px;
+      text-align: left;
+    }
+
+    input {
+      width: calc(100% - 20px);
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid var(--border-color);
+      border-radius: 5px;
+      background-color: var(--input-bg);
+      color: var(--text-color);
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: var(--button-bg);
+      color: var(--text-color);
+    }
+
+    button:hover {
+      background-color: var(--button-hover);
+    }
+
+    .error {
+      color: var(--error-color);
+      margin: 10px auto;
+      text-align: center;
+    }
+
+    .result {
+      margin: 20px auto;
+      width: 90%;
+      max-width: 600px;
+      padding: 10px;
+      border: 1px solid var(--border-color);
+      border-radius: 5px;
+      background-color: var(--input-bg);
+      color: var(--text-color);
+      text-align: left;
+      white-space: pre-wrap;
+    }
+
+    /* Pop-up styles */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.5s ease;
+    }
+
+    .popup-overlay.show {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .popup-content {
+      background-color: white;
+      color: #121212;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      width: 300px;
+      max-width: 100%;
+    }
+
+    .popup-content h2 {
+      margin-bottom: 20px;
+    }
+
+    .popup-content a {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .popup-content a:hover {
+      background-color: #128C7E;
+    }
+
+    /* Style for hidden link boxes */
+    .link-box-container {
+      margin: 20px auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .hidden-link {
+      padding: 15px 30px;
+      font-size: 1rem;
+      border: 2px solid var(--border-color);
+      border-radius: 10px;
+      background-color: var(--button-bg);
+      color: var(--text-color);
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+
+    .hidden-link:hover {
+      background-color: var(--button-hover);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>HENZ CC GENERATOR</h1>
+  </header>
+
+  <!-- Link Boxes -->
+  <div class="link-box-container">
+    <button class="hidden-link" data-link="../external.html?link=https://whatsapp.com/channel/0029VangYOt96H4JhFarL10C">WhatsApp Channel</button>
+    <button class="hidden-link" data-link="../external.html?link=https://t.me/EMMYHENZTECHINFO/">Telegram Channel</button>
+    <button class="hidden-link" data-link="../external.html?link=https://t.me/+MI8UCbBxJN1hYzJk">Hack Team Telegram</button>
+  </div>
+
+  <footer>
+    <p>Made with Love by EmmyHenz♨️ & Muhammad Makki❤</p>
+  </footer>
+
+  <script>
+    // Redirect user to the respective links
+    const hiddenLinks = document.querySelectorAll('.hidden-link');
+    hiddenLinks.forEach(button => {
+      button.addEventListener('click', () => {
+        const url = button.dataset.link;
+        window.open(url, '_blank');
+      });
+    });
+  </script>
+</body>
+</html>
